@@ -665,6 +665,14 @@
     };
     // ie method does not support 'all' and 'any' interfaces
     is.ie.api = ['not'];
+	
+    // is current browser the in-app facebook browser?
+    is.facebook = function() {
+		return (userAgent.indexOf("FBAN") > -1) || (userAgent.indexOf("FBAV") > -1);
+    };
+	
+    // facebook method does not support 'all' and 'any' interfaces
+    is.facebook.api = ['not'];
 
     // is current device ios?
     is.ios = function() {
